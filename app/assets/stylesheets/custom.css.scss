@@ -57,10 +57,13 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-style: italic;
+  font-family: "Times New Roman";
   letter-spacing: -1px;
   padding-top: 9x;
   font-weight: bold;
+  font-size: 2em;
 }
 
 #logo:hover {
@@ -72,4 +75,35 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a{
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }
