@@ -1,12 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$blue-faint: #cedae0;
+$blue-gray: #adc2cc;
 $gray-medium-light: #eaeaea;
 
 /* universal */
 
 body {
   padding-top: 60px;
+  background-color: $blue-gray;
 }
 
 section {
@@ -24,6 +27,9 @@ textarea {
   }
 }
 
+.jumbotron {
+  background-color: $blue-faint;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: "Times New Roman";
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
@@ -43,7 +50,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: $gray;
 }
 
 p {
@@ -80,6 +87,16 @@ p {
 
 #fitz {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+
+#music {
+  display:block;
   margin-left: auto;
   margin-right: auto;
 }
