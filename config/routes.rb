@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   post 'login' => 'session#create'
 
-  delete 'login' => 'session#destroy'
+  delete 'logout' => 'session#destroy'
 
   #get 'static_pages/home' // this will no longer work, now that root is set.
 
