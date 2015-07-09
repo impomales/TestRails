@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+  # Sessions resource
+  get 'login' => 'session#new'
+  
+  post 'login' => 'session#create'
+
+  delete 'login' => 'session#destroy'
+
   #get 'static_pages/home' // this will no longer work, now that root is set.
 
   get 'help' => 'static_pages#help'
