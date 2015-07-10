@@ -3,7 +3,5 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def sample
-    render text: "This is a sample app."
-  end
+  include SessionsHelper
 end
