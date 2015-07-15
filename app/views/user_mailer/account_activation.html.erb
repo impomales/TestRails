@@ -1,0 +1,9 @@
+<h1>Fitzy's Blog</h1>
+
+<p> Hit <%= @user.name %>, </p>
+
+<p>
+Welcome to Fitzy's Blog! Click on the link below to activate your account:
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token, email: @user.email) %>
