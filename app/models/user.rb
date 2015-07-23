@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :microposts
+  has_many :microposts, dependent: :destroy
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
- 
+   
   # returns random token for 'remember me'.
   def User.new_token
     SecureRandom.urlsafe_base64
