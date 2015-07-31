@@ -1,15 +1,27 @@
-<div class="center jumbotron">
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-mid-4">
+      <section class="user_info">
+	<%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+	<%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <div class="center jumbotron">
   <h1>Fitzy's blog</h1>
   <h2>
     Home Page of fitzy. 
     <a href="http://linkedin.com/in/impomales">linkedin</a>
   </h2>
 
-  <%= link_to "Sign up!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
+    <%= link_to "Sign up!", signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
 
-<%= link_to image_tag("fitz.jpg", alt: "Rails logo", id: "fitz"), root_path %>
-<audio id="music" controls="false" preload="true" autoplay="true">
-  <source src="/audio/Gymno.mp3" type="audio/mpeg">
-</audio>
-
+  <%= link_to image_tag("fitz.jpg", alt: "Rails logo", id: "fitz"), root_path %>
+  <audio id="music" controls="false" preload="true" autoplay="true">
+    <source src="/audio/Gymno.mp3" type="audio/mpeg">
+  </audio>
+<% end %>
