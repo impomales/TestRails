@@ -262,18 +262,20 @@ input {
     margin-right: 10px;
     margin-top: 5px;
   }
+}
 
-  aside {
-    textarea {
-      height: 100px;
-      margin-bottom: 5px;
-    }
+aside {
+  float: left;
+  width: 25%;
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
   }
+}
 
-  span.picture {
-    margin-top: 10px;
-    input {
-      border: 0;
-    }
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
   }
 }
